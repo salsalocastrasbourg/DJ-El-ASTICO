@@ -73,6 +73,16 @@ window.addEventListener('load', () => {
   }, 600);
 });
 
+// ── Video tabs
+document.querySelectorAll('.vtab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.vtab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.video-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
 // ── Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
