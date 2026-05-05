@@ -19,7 +19,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="El Astico — accueil">
-        <svg class="logo-svg" viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-svg" viewBox="0 0 235 48" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stop-color="#C0392B"/>
@@ -30,21 +30,43 @@
               <stop offset="100%" stop-color="#F39C12"/>
             </linearGradient>
           </defs>
-          <!-- Dancer silhouette -->
-          <circle cx="20" cy="7" r="5" fill="url(#lg)"/>
-          <path d="M20 12 C19 18 17 22 15 28" stroke="url(#lg)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M19 16 C15 12 10 8 7 6" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M20 17 C24 15 29 16 33 14" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M15 28 C13 34 10 39 8 44" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M15 28 C17 34 20 38 23 43" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <!-- Separator bar -->
-          <rect x="41" y="5" width="2" height="38" rx="1" fill="url(#lg)" opacity="0.6"/>
-          <!-- "El" script -->
-          <text x="50" y="23" font-family="Dancing Script, cursive" font-size="20" font-weight="700" fill="#E74C3C">El</text>
-          <!-- Gold accent line -->
-          <line x1="50" y1="26" x2="72" y2="26" stroke="url(#lgh)" stroke-width="1.2" opacity="0.6"/>
-          <!-- "ASTICO" serif -->
-          <text x="50" y="42" font-family="Playfair Display, serif" font-size="20" font-weight="900" fill="white" letter-spacing="2">ASTICO</text>
+
+          <!-- ═══ CAVALIER (gauche) ═══ -->
+          <circle cx="13" cy="6" r="4.5" fill="url(#lg)"/>
+          <!-- Torse -->
+          <path d="M13 10.5 C12 16 11 21 10 27" stroke="url(#lg)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- Bras gauche levé -->
+          <path d="M12 15 C9 11 6 8 4 6" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Bras droit vers partenaire -->
+          <path d="M13 16 C16 15 19 15 22 15" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Jambe gauche (pas arrière) -->
+          <path d="M10 27 C8 33 6 38 5 44" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Jambe droite -->
+          <path d="M10 27 C12 33 14 38 15 43" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+          <!-- ═══ MAINS JOINTES ═══ -->
+          <circle cx="22" cy="15" r="2" fill="url(#lg)" opacity="0.9"/>
+
+          <!-- ═══ CAVALIÈRE (droite) ═══ -->
+          <circle cx="31" cy="6" r="4.5" fill="url(#lg)"/>
+          <!-- Torse (légèrement penché) -->
+          <path d="M31 10.5 C30.5 16 30 21 30 27" stroke="url(#lg)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <!-- Bras droit levé élégamment -->
+          <path d="M31 15 C34 11 37 8 39 6" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Bras gauche vers cavalier -->
+          <path d="M30.5 16 C27 15 24 15 22 15" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Jambe droite (pas de côté) -->
+          <path d="M30 27 C32 33 34 38 35 44" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Jambe gauche (cruzado) -->
+          <path d="M30 27 C28 33 26 38 25 43" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+          <!-- ═══ SÉPARATEUR ═══ -->
+          <rect x="47" y="5" width="2" height="38" rx="1" fill="url(#lg)" opacity="0.6"/>
+
+          <!-- ═══ TEXTE ═══ -->
+          <text x="56" y="23" font-family="Dancing Script, cursive" font-size="20" font-weight="700" fill="#E74C3C">El</text>
+          <line x1="56" y1="26" x2="78" y2="26" stroke="url(#lgh)" stroke-width="1.2" opacity="0.6"/>
+          <text x="56" y="42" font-family="Playfair Display, serif" font-size="20" font-weight="900" fill="white" letter-spacing="2">ASTICO</text>
         </svg>
       </a>
       <button class="nav-burger" id="burger" aria-label="Menu">
@@ -572,7 +594,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">
-        <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" height="36" style="display:block">
+        <svg viewBox="0 0 235 48" xmlns="http://www.w3.org/2000/svg" height="34" style="display:block">
           <defs>
             <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stop-color="#C0392B"/>
@@ -583,16 +605,23 @@
               <stop offset="100%" stop-color="#F39C12"/>
             </linearGradient>
           </defs>
-          <circle cx="20" cy="7" r="5" fill="url(#lg2)"/>
-          <path d="M20 12 C19 18 17 22 15 28" stroke="url(#lg2)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M19 16 C15 12 10 8 7 6" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M20 17 C24 15 29 16 33 14" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M15 28 C13 34 10 39 8 44" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M15 28 C17 34 20 38 23 43" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <rect x="41" y="5" width="2" height="38" rx="1" fill="url(#lg2)" opacity="0.6"/>
-          <text x="50" y="23" font-family="Dancing Script, cursive" font-size="20" font-weight="700" fill="#E74C3C">El</text>
-          <line x1="50" y1="26" x2="72" y2="26" stroke="url(#lgh2)" stroke-width="1.2" opacity="0.6"/>
-          <text x="50" y="42" font-family="Playfair Display, serif" font-size="20" font-weight="900" fill="white" letter-spacing="2">ASTICO</text>
+          <circle cx="13" cy="6" r="4.5" fill="url(#lg2)"/>
+          <path d="M13 10.5 C12 16 11 21 10 27" stroke="url(#lg2)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M12 15 C9 11 6 8 4 6" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M13 16 C16 15 19 15 22 15" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M10 27 C8 33 6 38 5 44" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M10 27 C12 33 14 38 15 43" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="22" cy="15" r="2" fill="url(#lg2)" opacity="0.9"/>
+          <circle cx="31" cy="6" r="4.5" fill="url(#lg2)"/>
+          <path d="M31 10.5 C30.5 16 30 21 30 27" stroke="url(#lg2)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M31 15 C34 11 37 8 39 6" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M30.5 16 C27 15 24 15 22 15" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M30 27 C32 33 34 38 35 44" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M30 27 C28 33 26 38 25 43" stroke="url(#lg2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="47" y="5" width="2" height="38" rx="1" fill="url(#lg2)" opacity="0.6"/>
+          <text x="56" y="23" font-family="Dancing Script, cursive" font-size="20" font-weight="700" fill="#E74C3C">El</text>
+          <line x1="56" y1="26" x2="78" y2="26" stroke="url(#lgh2)" stroke-width="1.2" opacity="0.6"/>
+          <text x="56" y="42" font-family="Playfair Display, serif" font-size="20" font-weight="900" fill="white" letter-spacing="2">ASTICO</text>
         </svg>
         <span class="footer-sep">·</span>
         <span class="footer-asso">Salsa Loca Strasbourg</span>
