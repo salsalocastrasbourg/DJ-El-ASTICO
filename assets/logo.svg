@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" width="260" height="64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C0392B"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+    <linearGradient id="gradH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C0392B"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dancer silhouette -->
+  <!-- Head -->
+  <circle cx="26" cy="9" r="6" fill="url(#grad)"/>
+  <!-- Body -->
+  <path d="M26 15 C25 22 22 27 20 34" stroke="url(#grad)" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+  <!-- Right arm raised -->
+  <path d="M25 20 C20 15 14 10 10 7" stroke="url(#grad)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <!-- Left arm extended -->
+  <path d="M26 21 C31 19 37 20 42 18" stroke="url(#grad)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <!-- Left leg -->
+  <path d="M20 34 C17 41 13 48 10 56" stroke="url(#grad)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <!-- Right leg -->
+  <path d="M20 34 C22 41 26 47 30 54" stroke="url(#grad)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+
+  <!-- Vertical accent bar -->
+  <rect x="52" y="6" width="2.5" height="52" rx="1.25" fill="url(#grad)" opacity="0.7"/>
+
+  <!-- "El" — Dancing Script style (rendered as styled text) -->
+  <text x="63" y="30"
+    font-family="'Dancing Script', 'Georgia', cursive"
+    font-size="26"
+    font-weight="700"
+    fill="#E74C3C"
+    letter-spacing="1">El</text>
+
+  <!-- "ASTICO" — Playfair Display bold -->
+  <text x="63" y="55"
+    font-family="'Playfair Display', 'Georgia', serif"
+    font-size="26"
+    font-weight="900"
+    fill="#FFFFFF"
+    letter-spacing="3">ASTICO</text>
+
+  <!-- Gold underline accent under "El" -->
+  <line x1="63" y1="34" x2="92" y2="34" stroke="url(#gradH)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Small star/dot accent -->
+  <circle cx="248" cy="22" r="2.5" fill="#F39C12" opacity="0.5"/>
+  <circle cx="255" cy="32" r="1.5" fill="#C0392B" opacity="0.4"/>
+</svg>
