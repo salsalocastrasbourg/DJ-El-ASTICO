@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conneries · El Astico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .conneries-hero {
+      padding: calc(var(--nav-h) + 80px) 0 60px;
+      text-align: center;
+    }
+    .conneries-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .conneries-hero h1 span {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .conneries-hero p {
+      color: var(--grey2);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--red2);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--gold); }
+
+    .jokes-section {
+      padding: 20px 0 100px;
+    }
+    .jokes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .joke-card {
+      background: var(--dark3);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      position: relative;
+      transition: transform var(--transition), border-color var(--transition);
+    }
+    .joke-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+    .joke-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red2);
+      margin-bottom: 14px;
+    }
+    .joke-question {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .joke-answer-btn {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      color: var(--grey);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      cursor: pointer;
+      width: 100%;
+      transition: all var(--transition);
+    }
+    .joke-answer-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .joke-answer {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      background: rgba(243,156,18,0.08);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      color: var(--gold2);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .joke-answer.visible { display: block; }
+    .joke-emoji {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-name">El Astico</span>
+      </a>
+      <button class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#profil">Profil</a></li>
+        <li><a href="/#histoire">Histoire</a></li>
+        <li><a href="/#impact">Impact</a></li>
+        <li><a href="/#dj">DJ & Musique</a></li>
+        <li><a href="/#videos">Vidéos</a></li>
+        <li><a href="/#vision">Projets</a></li>
+        <li><a href="/conneries" class="nav-cta">Conneries</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div class="conneries-hero">
+    <div class="eyebrow">La page secrète</div>
+    <h1>Les <span>Conneries</span></h1>
+    <div class="s-bar" style="margin: 14px auto 20px;"></div>
+    <p>10 blagues d'enfants pour se détendre entre deux pas de salsa.</p>
+    <a href="/" class="back-link">← Retour au site</a>
+  </div>
+
+  <!-- ── BLAGUES ── -->
+  <section class="jokes-section">
+    <div class="jokes-grid">
+
+      <div class="joke-card">
+        <div class="joke-emoji">🐘</div>
+        <div class="joke-num">Blague #1</div>
+        <div class="joke-question">Comment appelle-t-on un éléphant qui se prend pour un médecin ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Un élé-fant-ôme !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🍕</div>
+        <div class="joke-num">Blague #2</div>
+        <div class="joke-question">Pourquoi la pizza va chez le médecin ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Parce qu'elle a un peu trop levé la pâte !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🦆</div>
+        <div class="joke-num">Blague #3</div>
+        <div class="joke-question">Qu'est-ce qu'un canif ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Un petit fien ! (petit chien)</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🐟</div>
+        <div class="joke-num">Blague #4</div>
+        <div class="joke-question">Comment les poissons communiquent-ils ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Par l'inter-net !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🎸</div>
+        <div class="joke-num">Blague #5</div>
+        <div class="joke-question">Quelle est la musique préférée des fantômes ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Le rock and... rôle !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🐄</div>
+        <div class="joke-num">Blague #6</div>
+        <div class="joke-question">Qu'est-ce qu'une vache qui tremble ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Un milk-shake !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🦁</div>
+        <div class="joke-num">Blague #7</div>
+        <div class="joke-question">Pourquoi le lion mange-t-il de la salade ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Pour chasser les éléphants ! — Mais ça marche pas, y'a pas d'éléphants ici. — Ben voilà !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🧊</div>
+        <div class="joke-num">Blague #8</div>
+        <div class="joke-question">Qu'est-ce qu'un crocodile qui surveille les bagages ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Un sacoché-gator !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">🚀</div>
+        <div class="joke-num">Blague #9</div>
+        <div class="joke-question">Comment appelle-t-on un chat tombé dans un pot de peinture le jour de Noël ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Un chat-peint de Noël !</div>
+      </div>
+
+      <div class="joke-card">
+        <div class="joke-emoji">💃</div>
+        <div class="joke-num">Blague #10</div>
+        <div class="joke-question">Pourquoi El Astico ne perd jamais aux cartes ?</div>
+        <button class="joke-answer-btn" onclick="toggleAnswer(this)">Voir la réponse</button>
+        <div class="joke-answer">Parce qu'il a toujours un pas d'avance sur les autres !</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="nav-logo-name">El Astico</span>
+        <span class="footer-sep">·</span>
+        <span class="footer-asso">Salsa Loca Strasbourg</span>
+      </div>
+      <div class="footer-copy">© 2026 Salsa Loca Strasbourg · Tous droits réservés</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleAnswer(btn) {
+      const answer = btn.nextElementSibling;
+      const visible = answer.classList.toggle('visible');
+      btn.textContent = visible ? 'Cacher la réponse' : 'Voir la réponse';
+    }
+  </script>
+</body>
+</html>
