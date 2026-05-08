@@ -99,3 +99,47 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 
 sections.forEach(s => sectionObserver.observe(s));
+
+// ── Discographie
+async function loadDiscographie() {
+  const grid = document.getElementById('disco-grid');
+  if (!grid) return;
+
+  try {
+    const res = await fetch('/discographie.json?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    renderDiscographie(data, grid);
+    grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  } catch (err) {
+    grid.innerHTML = '<p class="disco-error">Impossible de charger la discographie. Réessayez plus tard.</p>';
+  }
+}
+
+function renderDiscographie(data, grid) {
+  if (!data.length) {
+    grid.innerHTML = '<p class="disco-error">Aucune musique archivée pour l\'instant. La discographie sera alimentée au fil des soirées.</p>';
+    return;
+  }
+  grid.innerHTML = data.map(entry => {
+    const badgeClass = { portoricain: 'porto', romantica: 'romantica' }[entry.style] || '';
+    return `
+    <div class="disco-card reveal">
+      <div class="disco-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/${entry.youtube_id}"
+          title="${entry.artiste} — ${entry.titre}"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="disco-card-body">
+        <span class="disco-badge ${badgeClass}">${entry.style}</span>
+        <div class="disco-card-title">${entry.artiste} — ${entry.titre}</div>
+        <p class="disco-card-desc">${entry.description}</p>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+loadDiscographie();
