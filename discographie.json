@@ -1,0 +1,34 @@
+[
+  {
+    "artiste": "Los Van Van",
+    "titre": "Esto Te Pone la Cabeza Mala",
+    "style": "timba",
+    "description": "Un monument de la timba cubaine. Juan Formell et ses musiciens livrent un rythme imparable, des cuivres tranchants et une énergie de scène qui ne laisse personne assis. Incontournable.",
+    "youtube_id": "KbRlABiPKOI",
+    "date": "2026-05-05"
+  },
+  {
+    "artiste": "Havana D'Primera",
+    "titre": "Imagínate",
+    "style": "timba",
+    "description": "Alexandre Abreu et ses musiciens incarnent la timba dans sa forme la plus moderne et sophistiquée. Arrangements complexes, groove irrésistible — un must pour tout danseur de salsa cubaine.",
+    "youtube_id": "9bZkp7q19f0",
+    "date": "2026-05-04"
+  },
+  {
+    "artiste": "El Gran Combo de Puerto Rico",
+    "titre": "No Hay Cama Pa' Tanta Gente",
+    "style": "portoricain",
+    "description": "Le classique absolu de la salsa portoricaine. L'orchestre emblématique de Puerto Rico dans toute sa splendeur — cette chanson fait lever les salles du monde entier depuis plus de 50 ans.",
+    "youtube_id": "I6SBQzibWKc",
+    "date": "2026-05-03"
+  },
+  {
+    "artiste": "Marc Anthony",
+    "titre": "Valió la Pena",
+    "style": "romantica",
+    "description": "La salsa romantique dans sa version la plus bouleversante. La voix de Marc Anthony transcende les générations — idéale pour les moments d'émotion sur la piste.",
+    "youtube_id": "9kHi9-wXxI4",
+    "date": "2026-05-02"
+  }
+]

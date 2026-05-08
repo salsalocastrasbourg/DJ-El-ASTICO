@@ -1248,10 +1248,109 @@ footer {
   .tl-item { grid-template-columns: 70px 1fr; }
 
   .section { padding: 70px 0; }
+  .disco-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 420px) {
   .profil-cards { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ─────────────────────────────────────────
+   DISCOGRAPHIE SECTION
+───────────────────────────────────────── */
+.disco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.disco-card {
+  background: var(--dark3);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.disco-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+}
+
+.disco-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(192,57,43,0.35);
+}
+
+.disco-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.disco-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.disco-card-body {
+  padding: 16px 20px 20px;
+}
+
+.disco-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  color: var(--gold);
+  background: rgba(243,156,18,0.12);
+  border: 1px solid rgba(243,156,18,0.3);
+}
+
+.disco-badge.porto {
+  color: #E08070;
+  background: rgba(192,57,43,0.14);
+  border: 1px solid rgba(192,57,43,0.35);
+}
+
+.disco-badge.romantica {
+  color: var(--grey2);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.disco-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.disco-card-desc {
+  font-size: 0.85rem;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+.disco-error {
+  color: var(--grey);
+  font-size: 0.9rem;
+  padding: 40px 0;
+  text-align: center;
 }
